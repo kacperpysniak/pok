@@ -24,7 +24,7 @@
   
 **Migracja bazy danych:**
 * > python manage.py makemigrations
-* > python manage.py sqlmigrate `<nazwa_aplikacji>`(pokochaj_zwierzaka) `<nazwa_wygenerowanego_pliku>`
+* > python manage.py sqlmigrate `<nazwa_aplikacji>`(pokochaj_zwierzaka) `<numer_wygenerowanego_pliku>`
 * > python manage.py migrate
 
 **Tworzenie superużytkownika**
