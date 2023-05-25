@@ -7,7 +7,7 @@
 body, html {
   height: 100%;
   font-family: Poppins, sans-serif;
-  background: #e3d3ab;
+  background: #F9F4F1;
 }
 
 .nav{
@@ -83,7 +83,7 @@ body, html {
 
 .wrap-nav {
   width: 1400px;
-  background: #c87a68;
+  background: #F9F4F1;
   border-radius: 0px 0px 10px 10px;
   overflow: hidden;
 
