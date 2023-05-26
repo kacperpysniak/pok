@@ -63,11 +63,17 @@ def matching(request):
 
 
 def twoje_psy(request):
+    if not request.user.groups.filter(name='schronisko').exists():
+        return redirect('home')  # Przekierowanie użytkownika na stronę home, jeśli nie należy do grupy "schronisko"
+
     all_dogs = Dog.objects.all
     return render(request, 'twoje_psy.html', {'all': all_dogs})
 
 
 def create_dog(request):
+    if not request.user.groups.filter(name='schronisko').exists():
+        return redirect('home')  # Przekierowanie użytkownika na stronę home, jeśli nie należy do grupy "schronisko"
+
     if request.method == 'POST':
         create_dog_form = CreateDogForm(request.POST, request.FILES)
         if create_dog_form.is_valid():
@@ -110,13 +116,12 @@ def matching(request):
                                           pies_z_chorobami=pies_z_chorobami,
                                           uzytkownik=uzytkownik)
             new_dopasowanie.save()
-            # messages.info(request, 'Pomyślnie dodano nowego psa do bazy')
             return redirect('/home')
     else:
         create_dopasowanie_form = CreateDopasowanieForm()
-        # messages.info(request, 'Nie udało się dodać nowego psa do bazy')
 
     return render(request, 'matching.html', {'create_dopasowanie_form': create_dopasowanie_form})
+
 
 
 class PasswordChangeView(PasswordChangeView):
