@@ -29,6 +29,9 @@
 
 **Tworzenie superużytkownika**
 * > python manage.py createsuperuser
+  
+**Uruchamianie serwera**
+* > python manage.py runserver
 
 **Tworzenie grupy**
 * należy uruchomić program 

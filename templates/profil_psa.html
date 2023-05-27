@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <title>POK Strona Główna</title>
+    <title>POK Profil psa</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'css/glowna.css' %}">
@@ -62,27 +62,20 @@
 <div class="limiter">
     <div class="container-glowna">
         <div class="wrap-glowna">
-
-        {% for item in all %}
-           <div class="profil_psa">
-               <a href="/profil_psa/{{ item.pk }}">
-                   <div class="zdj">
-                       <img src="{{ item.fotografia }}" alt="{{ item.imie }}"><br>
-                   </div>
-                   <div class="dogs-glowna">
-                       Imie: {{ item.imie }} <br>
-                       Data urodzenia: {{ item.data_urodzenia }} <br>
-                       Rasa: {{ item.rasa }} <br>
-                       Charakter: {{ item.charakter }} <br>
-                       Specjalne potrzeby: {{ item.specjalne_potrzeby }} <br>
-                       Choroby: {{ item.choroby }} <br>
-                       Pobyt w schronisku od: {{ item.pobyt_w_schronisku }} <br>
-                       Schronisko: {{ item.shelter }} <br>
-                       <hr>
-                   </div>
-               </a>
-           </div>
-        {% endfor %}
+                <div class="zdj">
+                    <img src="{{ dog.fotografia.url }}" alt="{{ dog.imie }}"><br>
+                </div>
+                <div class="dogs-glowna">
+                    Imie: {{ dog.imie }} <br>
+                    Data urodzenia: {{ dog.data_urodzenia }} <br>
+                    Rasa: {{ dog.rasa }} <br>
+                    Charakter: {{ dog.charakter }} <br>
+                    Specjalne potrzeby: {{ dog.specjalne_potrzeby }} <br>
+                    Choroby: {{ dog.choroby }} <br>
+                    Pobyt w schronisku od: {{ dog.pobyt_w_schronisku }} <br>
+                    Schronisko: {{ dog.shelter }} <br>
+                    <hr>
+                </div>
         </div>
     </div>
 </div>
