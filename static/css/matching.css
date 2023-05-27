@@ -81,22 +81,15 @@ body, html {
 }
 
 .wrap-glowna {
-  margin-top: 130px;
-  width: 1200px;
+  width: 80%;
+  max-width: 600px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 15px 15px 15px 15px;
-  box-shadow: 5px 5px 30px -1px rgba(0,0,0,0.64);
-
+  padding: 15px;
+  box-shadow: 5px 5px 30px -1px rgba(0, 0, 0, 0.64);
+  margin-top: 150px;
+  height: auto;
 }
 
 .limiter-nav {

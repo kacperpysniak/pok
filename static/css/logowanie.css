@@ -105,7 +105,7 @@ iframe {
 
 .wrap-login100 {
   width: 600px; /* Zmiana wielkosci formularzalogowania */
-  height: 700px;
+  height: 600px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -116,7 +116,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 150px 150px 150px 150px;
+  padding: 75px 150px 150px 150px;
   box-shadow: 5px 5px 30px -1px rgba(0,0,0,0.64);
 }
 
@@ -125,7 +125,7 @@ iframe {
 .login100-pic {
   width: 316px;
   display: flex;
-  margin-right: 30px; /* Dodanie marginesu między zdjęciem a formularzem */
+  margin-right: 30px;
 }
 
 .login100-pic img {
