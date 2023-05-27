@@ -2,8 +2,8 @@
 [ style ]*/
 
 * {
-	margin: 0px; 
-	padding: 0px; 
+	margin: 0px;
+	padding: 0px;
 	box-sizing: border-box;
 }
 
@@ -100,15 +100,15 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #e8b6a8;
+  background: #f0d6c7;
 }
 
 .wrap-login100 {
-  width: 960px;
+  width: 600px; /* Zmiana wielkosci formularzalogowania */
+  height: 850px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -116,7 +116,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 150px 150px 100px 100px;
+  padding: 150px 150px 150px 150px;
   box-shadow: 5px 5px 30px -1px rgba(0,0,0,0.64);
 }
 
@@ -124,10 +124,12 @@ iframe {
 [ zdięcie ]*/
 .login100-pic {
   width: 316px;
+  order: -1; /* Zmiana kolejności zdjęcia i formularza */
+  margin-right: 30px; /* Dodanie marginesu między zdjęciem a formularzem */
 }
 
 .login100-pic img {
-  max-width: 100%;
+  max-width: 50%;
 }
 
 
@@ -313,4 +315,3 @@ iframe {
     opacity: 1;
   }
 }
-

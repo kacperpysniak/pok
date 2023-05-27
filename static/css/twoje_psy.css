@@ -7,7 +7,7 @@
 body, html {
   height: 100%;
   font-family: Poppins, sans-serif;
-  background: #e3d3ab;
+  background: #F9F4F1;
 }
 
 .dogs-glowna {
@@ -20,7 +20,7 @@ body, html {
   padding: 0;
   margin: 0;
   font-family: Poppins, sans-serif;
-  background-color: #c87a68;
+  background-color: #e8b6a8;
   color: white;
   display: flex;
   justify-content: space-around;
@@ -82,7 +82,7 @@ body, html {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #e3d3ab;
+  background: #f9f4f1;
 }
 
 .wrap-glowna {
@@ -133,7 +133,7 @@ body, html {
 }
 .wrap-nav {
   width: 1400px;
-  background: #c87a68;
+  background: #e8b6a8;
   border-radius: 0px 0px 10px 10px;
   overflow: hidden;
 
@@ -158,7 +158,7 @@ body, html {
   width: 100%;
   height: 40px;
   border-radius: 25px;
-  background: #c87a68;
+  background: #e8b6a8;
   padding: 0;
   cursor: pointer;
 }
@@ -182,7 +182,7 @@ body, html {
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: #c87a68; /* Set a background color */
+  background-color: #f0d6c7; /* Set a background color */
   font-size: 16px;
   height: 60px;
   width: 60px;
