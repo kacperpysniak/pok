@@ -133,7 +133,11 @@ body, html {
 }
 .wrap-nav {
   width: 1400px;
+<<<<<<< HEAD
   background: #e8b6a8;
+=======
+  background: #F9F4F1;
+>>>>>>> 12a5254c79d8d800fca817ce9f8fb47f414cafd5
   border-radius: 0px 0px 10px 10px;
   overflow: hidden;
 
