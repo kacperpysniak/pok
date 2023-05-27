@@ -105,7 +105,7 @@ iframe {
 
 .wrap-login100 {
   width: 600px; /* Zmiana wielkosci formularzalogowania */
-  height: 850px;
+  height: 700px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -124,7 +124,7 @@ iframe {
 [ zdięcie ]*/
 .login100-pic {
   width: 316px;
-  order: -1; /* Zmiana kolejności zdjęcia i formularza */
+  display: flex;
   margin-right: 30px; /* Dodanie marginesu między zdjęciem a formularzem */
 }
 
@@ -147,7 +147,7 @@ iframe {
   font-family: Poppins;
   width: 100%;
   display: block;
-  padding-bottom: 54px;
+  padding-bottom: 50px;
 }
 
 
