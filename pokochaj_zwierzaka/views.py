@@ -7,8 +7,7 @@ from django.contrib.auth.forms import PasswordChangeForm
 from .models import Dog, Dopasowanie
 from .forms import CreateDogForm, CreateDopasowanieForm, PasswordChangingForm
 from django.urls import reverse_lazy
-
-
+from django.shortcuts import render, get_object_or_404
 # tworzenie widków
 
 def index(request):
@@ -56,7 +55,10 @@ def home(request):
 
 def profil(request):
     return render(request, 'profile.html')
-
+def profil_psa(request, pk):
+    dog = get_object_or_404(Dog, pk=pk)
+    context = {'dog': dog}
+    return render(request, 'profil_psa.html', context)
 
 def matching(request):
     return render(request, 'matching.html')
@@ -123,8 +125,7 @@ def matching(request):
     return render(request, 'matching.html', {'create_dopasowanie_form': create_dopasowanie_form})
 
 
-
 class PasswordChangeView(PasswordChangeView):
-    #form_class = PasswordChangeForm
+    # form_class = PasswordChangeForm
     form_class = PasswordChangingForm
     success_url = reverse_lazy('home')
