@@ -62,33 +62,26 @@
 
 <div class="wrapper">
     <div class="left">
-        <img class="lapka" src="/static/images/lapka.png" alt="IMG">
+        <img src="{% static 'images/user.png' %}" alt="IMG"
+        alt="user" width="100">
+        <h4></h4>
+         <p><h2>Witaj {{ user.username }}!</h2></p>
     </div>
     <div class="right">
         <div class="info">
-            <h1>TWOJE KONTO</h1>
+            <h2>Informacje</h2>
             <div class="info_data">
                  <div class="data">
-                    <div class="name">
-                        <p>Nazwa: </p>
-                        <p>{{ user.username }}</p>
-                    </div>
-                    <div class="email">
-                        <p>Email: </p>
-                        <p>{{ user.email }}</p>
-                    </div>
-                    <div class="buttons">
-                         <button class="button">
-                             <a class="buttons" href="{% url 'password' %}">Zmień hasło</a>
-                         </button>
-                         {% if request.user.groups.all.0.name != 'schronisko' %}
-                             <button id="schroniska" class="button">Kontakt dla schronisk</button>
-                             <p class="tresc" id="tresc"></p>
-                         {% endif %}
-                        <button class="button">
-                            <a class="buttons" href="{% url 'logout' %}">Wyloguj się</a>
-                        </button>
-                    </div>
+                    <h4>Email</h4>
+                    <h5>{{ user.email }}</h5>
+                     <h6><a href="{% url 'password' %}">Zmień hasło</a></h6>
+                     <h6><a href="{% url 'logout' %}">Wyloguj się</a></h6>
+                     {% if request.user.groups.all.0.name != 'schronisko' %}
+                            <li>
+                                 <button id="schroniska">Kontakt dla schronisk</button>
+                                 <p id="tresc"></p>
+                            </li>
+                     {% endif %}
                  </div>
             </div>
         </div>
