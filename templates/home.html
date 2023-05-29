@@ -61,36 +61,84 @@
 
 <div class="limiter">
     <div class="container-glowna">
-        <div class="wrap-glowna">
-
-        {% for item in all %}
-           <div class="profil_psa">
-               <a href="/profil_psa/{{ item.pk }}">
-                   <div class="zdj">
-                       <img src="{{ item.fotografia }}" alt="{{ item.imie }}"><br>
-                   </div>
-                   <div class="dogs-glowna">
-                       Imie: {{ item.imie }} <br>
-                       Data urodzenia: {{ item.data_urodzenia }} <br>
-                       Rasa: {{ item.rasa }} <br>
-                       Charakter: {{ item.charakter }} <br>
-                       Specjalne potrzeby: {{ item.specjalne_potrzeby }} <br>
-                       Choroby: {{ item.choroby }} <br>
-                       Pobyt w schronisku od: {{ item.pobyt_w_schronisku }} <br>
-                       Schronisko: {{ item.shelter }} <br>
-                       <hr>
-                   </div>
-               </a>
-           </div>
-        {% endfor %}
+        <div class="page-name">ZWIERZAKI</div>
+        <div class="szukaj">
+            <button class="szukaj-psa">Szukaj pieska</button>
         </div>
+
+        <div class="opcje" style="display: none; margin-top: 30px; margin-left: 10%;  ">
+            <select class="Rasa" onchange="wybierzRase(this)"
+                    style="padding: 10px; margin-bottom: 20px; box-shadow: 0 0px 10px rgba(0, 0, 0, 0.6); color: #ffffff; background: #E8B6A8; font-weight: bold; border-color: #E8B6A8; border-radius: 8px; font-size: 20px  ">
+                <option value="" selected disabled hidden>Rasa</option>
+                <option value="wszystkie">Wszystkie</option>
+                <option value="ON">owczarek niemiecki</option>
+                <option value="LR">labrador retriever</option>
+                <option value="YT">yorkshire terrier</option>
+                <option value="SM">sznaucer miniaturowy</option>
+                <option value="BF">buldog francuski</option>
+            </select>
+        </div>
+
+        <div class="wrap-glowna">
+            {% for item in all %}
+                <div class="profil_psa">
+                    <a href="/profil_psa/{{ item.pk }}">
+                        <div class="zdj">
+                            <img src="{{ item.fotografia }}" alt="{{ item.imie }}"><br>
+                        </div>
+                        <div class="dogs-glowna">
+                            <div class="dog-name"><a>{{ item.imie }}</a></div>
+                            <br>
+                            <a class="dog-description">Rasa: <span>{{ item.rasa }}</span> <br>
+                                Data urodzenia: {{ item.data_urodzenia }} <br>
+                                Charakter: {{ item.charakter }} <br>
+                                {# Specjalne potrzeby: {{ item.specjalne_potrzeby }} <br> #}
+                                {# Choroby: {{ item.choroby }} <br> #}
+                                Pobyt w schronisku od: {{ item.pobyt_w_schronisku }} <br>
+                                Schronisko: {{ item.shelter }} <br>
+                            </a>
+                            <a class="info">Więcej informacji</a>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <img src="{% static 'images/strzalka.png' %}" alt="IMG">
+        </button>
+
     </div>
 </div>
+<script>
 
+    var szukajPieskaButton = document.querySelector(".szukaj-psa");
+    var opcjeDiv = document.querySelector(".opcje");
+    var selectedRasa = "";
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">
-    <img src="{% static 'images/strzalka.png' %}" alt="IMG">
-</button>
-</div>
-</body>
-</html>
+    szukajPieskaButton.addEventListener("click", function () {
+        opcjeDiv.style.display = "block";
+    });
+
+    function wybierzRase(selectElement) {
+        selectedRasa = selectElement.value;
+        filtrujPsyPoRasie(selectedRasa);
+    }
+
+    function filtrujPsyPoRasie(rasa) {
+        console.log(rasa)
+        var psyElements = document.getElementsByClassName("profil_psa");
+        console.log((psyElements))
+        for (var i = 0; i < psyElements.length; i++) {
+            var psyElement = psyElements[i];
+            var rasaElement = psyElement.querySelector(".dog-description > span");
+            console.log(rasaElement)
+            console.log(rasa)
+            if (rasa === "wszystkie" || rasaElement.textContent === rasa) {
+                psyElement.style.display = "block";
+            } else {
+                psyElement.style.display = "none";
+            }
+        }
+    }
+</script>
