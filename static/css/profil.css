@@ -159,26 +159,73 @@ body, html {
 #myBtn:hover {
   background-color: #333333; /* Add a dark-grey background on hover */
 }
+div.name {
+  display: flex;
+  flex-direction: row;
+}
 
+div.email {
+  display: flex;
+  flex-direction: row;
+}
+
+div.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.button.button {
+  margin-bottom: 20px;
+  width: 227px;
+  height: 52px;
+  background: #E8B6A8;
+  border: none;
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 90px;
+  text-transform: uppercase;
+}
+
+.button.button:hover {
+  color: #333333;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.buttons:hover {
+  color: #333333;
+}
+
+p.tresc {
+  text-align: center;
+}
+img.lapka {
+  width: 200px;
+  height: 200px;
+}
 
 .wrapper{
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 60%;
+  width: 40%;
   display: flex;
   box-shadow: 5px 5px 30px -1px rgba(0,0,0,0.64);
 }
 
 .wrapper .left{
-  width: 35%;
-  background: linear-gradient(to right,#c25941,#c87a68);
+  width: 45%;
+  background: #fff;
   padding: 30px 25px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   text-align: center;
   color: #fff;
+  text-transform: uppercase;
 }
 
 .wrapper .left img{
@@ -213,6 +260,7 @@ body, html {
 .wrapper .right .projects_data{
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .wrapper .right .info_data .data,
