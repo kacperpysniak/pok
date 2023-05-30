@@ -5,7 +5,7 @@
     <title>POK Profil psa</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/glowna.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/profil_psa.css' %}">
     <link rel="icon" href="{% static 'images/lapka.png' %}">
     <script type="text/javascript" src="{% static 'js/glowna.js' %}"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -61,21 +61,29 @@
 
 <div class="limiter">
     <div class="container-glowna">
+         <div class="page-name">OPIS PSA </div>
         <div class="wrap-glowna">
+            <div class="name"> <h1>{{ dog.imie }}</h1></div>
+            <hr>
+            <div class="info-dog">
                 <div class="zdj">
                     <img src="{{ dog.fotografia.url }}" alt="{{ dog.imie }}"><br>
                 </div>
                 <div class="dogs-glowna">
-                    Imie: {{ dog.imie }} <br>
+
                     Data urodzenia: {{ dog.data_urodzenia }} <br>
                     Rasa: {{ dog.rasa }} <br>
                     Charakter: {{ dog.charakter }} <br>
-                    Specjalne potrzeby: {{ dog.specjalne_potrzeby }} <br>
                     Choroby: {{ dog.choroby }} <br>
                     Pobyt w schronisku od: {{ dog.pobyt_w_schronisku }} <br>
-                    Schronisko: {{ dog.shelter }} <br>
+                    Schronisko: {{ dog.shelter }} <br> <br>
                     <hr>
                 </div>
+            </div>
+            <div class="description"> <h2>Opis</h2> <span> {{ dog.specjalne_potrzeby }}</span>
+            <p> W sprawie adopcji można do nas dzwonić pod numer <span class="number"> 777 777 777 (9.00-18.00) </span></p>
+            </div>
+            <div class="button"> <button class="adopt">Chcę zaadoptopwać!</button></div>
         </div>
     </div>
 </div>

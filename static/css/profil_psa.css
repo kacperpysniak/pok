@@ -104,14 +104,17 @@ body, html {
 }
 
 .wrap-glowna {
-    margin: 40px auto;
+    margin: 40px auto 100px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     padding: 15px 15px 15px 15px;
-    gap: 60px;
-    max-width: 1500px;
-
+    gap: 20px;
+    width: 60%;
+    top: 50px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    flex-direction: column
 }
 
 .limiter-nav {
@@ -136,12 +139,13 @@ body, html {
 }
 
 .zdj {
-    width: 100%;
-    height: 50%;
+    width: 50%;
+    height: 100%;
+
 }
 
 .zdj img {
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     width: 100%;
     height: 100%;
 }
@@ -225,28 +229,11 @@ body, html {
 }
 
 #myBtn:hover {
-    /*background-color: #333333;*/
     background: #f9f4f1;
     border-color: #e8b6a8;
 
 }
 
-
-.profil_psa {
-    background-color: #ffffff;
-    width: 309px;
-    height: 500px;
-    transition: transform 0.3s;
-    border-radius: 10px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.profil_psa:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-
-}
 
 .limiter-nav {
     z-index: 100;
@@ -261,7 +248,7 @@ body, html {
     font-weight: bold;
 }
 
-.dog-description{
+.dog-description {
     font-size: 14px;
 }
 
@@ -273,27 +260,54 @@ body, html {
 .info {
     padding-top: 10px;
     display: flex;
-    justify-content: right;
-    text-align: right;
+    justify-content: space-around;
+
     color: #0071A8;
     font-size: 15px;
 }
 
-.szukaj {
-    width: 100%;
+.info-dog {
     display: flex;
-    padding-top: 40px;
+    justify-content: space-around;
+    margin: 20px 0;
 }
 
-.szukaj-psa {
-    padding: 10px;
+.name {
+    text-align: center;
+}
+
+hr {
+    width: 90%;
+    margin: auto;
+    color: #0071A8;
+    border: 2px solid #0071A8;
+    border-radius: 5px;
+}
+
+.description {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.number {
+    color: #0071A8;
+}
+
+.adopt{
+        padding: 10px;
     background: #0071A8;
     color: white;
     border-radius: 8px;
     border-color: #0071A8;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     margin-left: 10%;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 20px;
+}
+.button{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
 }
