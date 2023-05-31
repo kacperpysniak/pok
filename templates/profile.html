@@ -44,13 +44,12 @@
                         </div>
                         <div class="container-nav-btn">
                             <button class="nav-btn">
-                                {%  block content %}
+
                                     {% if user.is_authenticated %}
                                         <a href="{% url 'logout' %}">Wyloguj się</a>
                                     {% else %}
                                         <a href="{% url 'index' %}">Zaloguj się</a>
                                     {% endif %}
-                                {%  endblock %}
                             </button>
                         </div>
                     </li>
@@ -59,8 +58,10 @@
         </div>
     </div>
 </div>
+ <div class="page-name">TWOJE KONTO</div>
 
 <div class="wrapper">
+
     <div class="left">
        <img class="lapka" src="/static/images/lapka.png" alt="IMG">
     </div>
@@ -69,12 +70,12 @@
             <h1>TWOJE KONTO</h1>
             <div class="info_data">
                  <div class="name">
-                        <p>Nazwa: </p>
-                        <p>{{ user.username }}</p>
+                        <p class="p">Nazwa: </p>
+                        <p class="p">{{ user.username }}</p>
                     </div>
                     <div class="email">
-                        <p>Email: </p>
-                        <p>{{ user.email }}</p>
+                        <p class="p">Email: </p>
+                        <p class="p">{{ user.email }}</p>
                     </div>
                     <div class="buttons">
                          <button class="button">
@@ -92,6 +93,7 @@
             </div>
         </div>
     </div>
+
 </div>
 <script>
     var s= document.getElementById('schroniska'),
@@ -101,5 +103,7 @@
         tresc.innerHTML = 'Aby uzyskać prawa do dodawania psów skontaktuj sie z nami pod adresem e-mail: pokzwierzaka@gmail.com lub telefonicznie tel: xxx-xxx-xxx';
     }
 </script>
+
 </body>
+ {% include 'stopka.html' %}
 </html>

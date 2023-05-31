@@ -14,6 +14,7 @@
 </head>
 <body>
 
+
 <div class="limiter-nav">
     <div class="container-nav">
         <div class="wrap-nav">
@@ -37,7 +38,7 @@
                     <li>
                         <div class="container-nav-btn">
                             <button class="nav-btn">
-                                <a href={% url 'profile' %}>Twoje konto</a>
+                                <a href="profile">Twoje konto</a>
                             </button>
                         </div>
                         <div class="container-nav-btn">
@@ -93,5 +94,7 @@
     <img src="{% static 'images/strzalka.png' %}" alt="IMG">
 </button>
 </div>
+
+{% include 'stopka.html' %}
 </body>
 </html>
