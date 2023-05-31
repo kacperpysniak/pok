@@ -214,6 +214,7 @@ body, html {
     text-decoration-color: #0071A8;
     color: #000000;
     font-weight: normal;
+    font-size: 24px;
 }
 
 .nav ul li:nth-child(2) {
@@ -452,7 +453,7 @@ img.lapka {
 .wrapper{
     border-radius: 10px;
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   width: 40%;
