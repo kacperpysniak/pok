@@ -9,8 +9,11 @@ from django.contrib.auth.models import User
 class CreateDogForm(ModelForm):
     class Meta:
         model = Dog
-        fields = ['data_urodzenia', 'rasa', 'imie', 'charakter', 'specjalne_potrzeby',
-                  'choroby', 'pobyt_w_schronisku', 'fotografia']
+        fields = ['data_urodzenia', 'rasa', 'imie', 'charakter',
+                  'choroby', 'specjalne_potrzeby', 'pobyt_w_schronisku', 'fotografia']
+        labels = {
+            'specjalne_potrzeby': 'Opis',
+        }
         widgets = {
             'data_urodzenia': forms.SelectDateWidget(years=range(1998, datetime.datetime.now().year + 1)),
             'pobyt_w_schronisku': forms.SelectDateWidget(years=range(1998, datetime.datetime.now().year + 1)),
